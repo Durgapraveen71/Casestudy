@@ -1,0 +1,238 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<h3>Registration Form</h3>
+				<form [formGroup]="registerForm"   (ngSubmit)="onSubmit()" method="POST"  action="/register">
+					<div class="form-group">
+						<label>First Name</label>
+						<input type="text" formControlName="FirstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+						<div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+						  <div *ngIf="f.firstName.invalid && f.firstName.touched" class="text-danger">Name is Required</div> 
+							<div *ngIf="f.firstName.errors.required">First Name is required</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Last Name</label>
+						<input type="text" formControlName="LastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+						<div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+							<div *ngIf="f.lastName.errors.required">Last Name is required</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>User Name</label>
+						<input type="text" formControlName="UserName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+						<div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+							<div *ngIf="f.lastName.errors.required">UserName is required</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label>Email</label>
+						<input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+						<div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+							<div *ngIf="f.email.errors.required">Email is required</div>
+							<div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input type="password" formControlName="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+						<div *ngIf= "submitted && f.password.errors" class="invalid-feedback">
+							<div *ngIf="f.password.errors.required">Password is required</div>
+							<div *ngIf="f.password.errors.minlength">Password must be at least 8 characters</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-primary">Register</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+  </div>    
+  
+ <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Bootstrap Simple Registration Form</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<body>
+	<div class="signup-form">
+		<form action="/register"  method="POST">
+			<h2>Register</h2>
+			<p class="hint-text">Create your account. It's free and only takes a minute.</p>
+			<div class="form-group">
+				<div class="row">
+					<div class="col"><input type="text" class="form-control" name="FirstName" placeholder="First Name" required="required"></div>
+					<div class="col"><input type="text" class="form-control" name="LastName" placeholder="Last Name" required="required"></div>
+				</div>        	
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-control" name="Email" placeholder="Email" required="required">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" name="Password" placeholder="Password" required="required">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required="required">
+			</div>       
+			<div class="form-group">
+				<label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+			</div>
+		</form>
+		<div class="text-center">Already have an account? <a href="login">Sign in</a></div>
+	</div>
+	</body> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!----	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div class="container">
+<div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Register</div>
+                            <div class="card-body">
+
+                                <form class="form-horizontal" method="post" action="/register">
+
+                                    <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label">firstName</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Enter FirstName" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="cols-sm-2 control-label">lastName</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Enter your lastName" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username" class="cols-sm-2 control-label">email</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="cols-sm-2 control-label">password</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                       <div class="form-group ">
+                                        <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                                    </div>
+                                    <div class="login-register">
+                                        <a href="login">Login</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+</div> 
+-->
