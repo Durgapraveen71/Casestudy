@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 
+
+//schema for reain schedule
+//var TrainSchedule = mongoose('TrainSchedule, {)
 var  Employee = mongoose.model('Employee',{
     Sno: { type : Number},
      TrainNumber :{ type: Number},
@@ -8,7 +11,9 @@ var  Employee = mongoose.model('Employee',{
       To : {type: String},
       Timing : {type: Number},
       ReservationAvailable : {type: String},
-      SpecialTrips : {type: String}
+      SpecialTrips : {type: String},
+      TicketPrice :  {type: Number}
 
 });
+//module.exports = {TrainSchedule};
 module.exports = { Employee };

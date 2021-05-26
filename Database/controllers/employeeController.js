@@ -1,6 +1,7 @@
 const express = require('express');
 const { ObjectUnsubscribedError } = require('rxjs');
 var router = express.Router();
+// var { TrainSchedule } = require('../models/employee');
 
 var { Employee } = require('../models/employee');
 
@@ -36,6 +37,7 @@ router.post('/',(req,res)=>{
      Timing : req.body.Timing,
      ReservationAvailable : req.body.ReservationAvailable,
      SpecialTrips :req.body.SpecialTrips,
+     TicketPrice: req.body.TicketPrice,
   });
   emp.save((err, doc) =>{
       if(!err){res.send(doc); }
@@ -55,8 +57,10 @@ router.put('/:id', (req,res)=>{
          Timing : req.body.Timing,
          ReservationAvailable : req.body.ReservationAvailable,
          SpecialTrips :req.body.SpecialTrips,
+         TicketPrice: req.body.TicketPrice,
 
      };
+
      Employee.findByIdAndUpdate(req.params.id, {$set: emp}, {new: true}, (err, doc)=> {
    
         if(!err) { res.send(doc);}
@@ -77,4 +81,4 @@ router.delete('/:id', (req, res)=>{
 
 
 
-module.exports = router;
+module.exports = router; 

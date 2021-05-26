@@ -7,7 +7,7 @@ import { TicketpricesComponent } from './ticketprices/ticketprices.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 //import {RegistrationComponent} from './registration/registration.component'
-import { LoginComponent } from './login/login.component'
+
 import {HomeComponent} from './home/home.component'
 import {HeaderComponent} from './header/header.component'
 import {BookticketComponent} from './bookticket/bookticket.component'
@@ -22,10 +22,7 @@ const routes: Routes = [
     path: 'sign-up',
     component: SignUpComponent
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
+  
   
   {
     path: 'ticketprices',
